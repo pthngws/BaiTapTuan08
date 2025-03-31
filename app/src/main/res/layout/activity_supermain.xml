@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="24dp"
+    android:background="#FAFAFA">
+
+    <Button
+        android:id="@+id/btnFragmentStatusOrder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Open FragmentStatusOrder"
+        android:backgroundTint="#3F51B5"
+        android:textColor="#FFFFFF"
+        android:paddingHorizontal="28dp"
+        android:paddingVertical="14dp"
+        android:textAllCaps="false"
+        android:elevation="4dp"
+        android:layout_marginBottom="20dp" />
+
+    <Button
+        android:id="@+id/btnRecyclerViewIndicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Open RecyclerViewIndicator"
+        android:backgroundTint="#3F51B5"
+        android:textColor="#FFFFFF"
+        android:paddingHorizontal="28dp"
+        android:paddingVertical="14dp"
+        android:textAllCaps="false"
+        android:elevation="4dp"
+        android:layout_marginBottom="20dp" />
+
+    <Button
+        android:id="@+id/btnViewFlipper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Open ViewFlipper"
+        android:backgroundTint="#3F51B5"
+        android:textColor="#FFFFFF"
+        android:paddingHorizontal="28dp"
+        android:paddingVertical="14dp"
+        android:textAllCaps="false"
+        android:elevation="4dp" />
+
+</LinearLayout>
