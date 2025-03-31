@@ -29,7 +29,6 @@ public class ImagesViewPageAdapter extends PagerAdapter {
         ImageView imageView = view.findViewById(R.id.imgView);
         Images images = imagesList.get(position);
         imageView.setImageResource(images.getImagesId());
-        // add view
         container.addView(view);
         return view;
     }

@@ -25,15 +25,9 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        // ViewBinding
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-
-        // Toolbar
         setSupportActionBar(binding.toolBar);
-
-        // Floating Action Button (FAB)
         FloatingActionButton fab = binding.fabAction;
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -43,7 +37,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // Tab Layout + ViewPager2
         binding.tabLayout.addTab(binding.tabLayout.newTab().setText("Xác nhận"));
         binding.tabLayout.addTab(binding.tabLayout.newTab().setText("Lấy hàng"));
         binding.tabLayout.addTab(binding.tabLayout.newTab().setText("Đang giao"));
@@ -53,8 +46,6 @@ public class MainActivity extends AppCompatActivity {
         FragmentManager fragmentManager = getSupportFragmentManager();
         viewPager2Adapter = new  com.example.btt8.FragmentStatusOrder.ViewPager2Adapter(fragmentManager, getLifecycle());
         binding.viewPager2.setAdapter(viewPager2Adapter);
-
-        // Xử lý chọn tab
         binding.tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
@@ -71,7 +62,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // Xử lý thay đổi trang trong ViewPager2
         binding.viewPager2.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
             @Override
             public void onPageSelected(int position) {
@@ -80,7 +70,6 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    // Phương thức đổi icon của FAB theo tab
     private void changeFabIcon(final int index) {
         binding.fabAction.hide();
         new Handler().postDelayed(new Runnable() {
@@ -102,7 +91,6 @@ public class MainActivity extends AppCompatActivity {
         }, 2000);
     }
 
-    // Tạo menu
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
@@ -110,7 +98,6 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
-    // Xử lý chọn item trong menu
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();

@@ -27,7 +27,6 @@ public class ViewFlipperActivity extends AppCompatActivity {
         ActionViewFlipperMain();
     }
 
-    // hàm Flipper
     private void ActionViewFlipperMain() {
         List<String> arrayListFlipper = new ArrayList<>();
         arrayListFlipper.add("http://app.iostar.vn/appfoods/flipper/guangaeo.png");
@@ -45,7 +44,6 @@ public class ViewFlipperActivity extends AppCompatActivity {
         viewFlipperMain.setFlipInterval(3000);
         viewFlipperMain.setAutoStart(true);
 
-        // thiết lập animation cho flipper
         Animation slide_in = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.slide_in_right);
         Animation slide_out = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.slide_out_right);
         viewFlipperMain.setInAnimation(slide_in);

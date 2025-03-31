@@ -12,7 +12,7 @@ public class LinePagerIndicatorDecoration extends RecyclerView.ItemDecoration {
     private final Paint paint = new Paint();
 
     public LinePagerIndicatorDecoration() {
-        paint.setColor(0xFFFFFFFF); // Màu trắng
+        paint.setColor(0xFFFFFFFF);
         paint.setStrokeWidth(5);
     }
 

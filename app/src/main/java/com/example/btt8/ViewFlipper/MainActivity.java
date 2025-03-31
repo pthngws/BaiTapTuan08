@@ -40,7 +40,6 @@ public class MainActivity extends AppCompatActivity {
         viewPager.setAdapter(adapter);
         circleIndicator.setViewPager(viewPager);
 
-        // Auto-run ViewPager
         runnable = new Runnable() {
             @Override
             public void run() {
@@ -54,7 +53,6 @@ public class MainActivity extends AppCompatActivity {
         };
         handler.postDelayed(runnable, 3000);
 
-        // Lắng nghe sự kiện ViewPager
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
@@ -119,13 +117,12 @@ public class MainActivity extends AppCompatActivity {
             return (imagesList != null) ? imagesList.size() : 0;
         }
 
-        // ✅ Thêm class ViewHolder
         public class ImagesViewHolder extends RecyclerView.ViewHolder {
             ImageView imageView;
 
             public ImagesViewHolder(@NonNull View itemView) {
                 super(itemView);
-                imageView = itemView.findViewById(R.id.imgView); // Đảm bảo item_images.xml có ImageView với id này
+                imageView = itemView.findViewById(R.id.imgView);
             }
         }
     }

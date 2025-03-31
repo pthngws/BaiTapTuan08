@@ -28,10 +28,8 @@ public class NewOrderFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater,
                              @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        // Inflate the layout for this fragment
         binding = FragmentNeworderBinding.inflate(inflater, container, false);
 
-        // recyclerView
 
         return binding.getRoot();
     }

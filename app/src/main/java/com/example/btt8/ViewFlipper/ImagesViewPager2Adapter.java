@@ -39,13 +39,12 @@ public class ImagesViewPager2Adapter extends RecyclerView.Adapter<ImagesViewPage
         return (imagesList != null) ? imagesList.size() : 0;
     }
 
-    // ✅ Thêm ViewHolder để tránh lỗi
     public static class ImagesViewHolder extends RecyclerView.ViewHolder {
         ImageView imageView;
 
         public ImagesViewHolder(@NonNull View itemView) {
             super(itemView);
-            imageView = itemView.findViewById(R.id.imgView); // Cần có ImageView trong `item_images.xml`
+            imageView = itemView.findViewById(R.id.imgView);
         }
     }
 }
